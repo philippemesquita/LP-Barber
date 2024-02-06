@@ -1,0 +1,171 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url('../assets/bg.svg');
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+// Hero
+
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 940px;
+    text-align: center;
+
+    h1{
+        font-size: 2.9rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.button-contact{
+    background-color: $red-normal;
+    color: $white-normal;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+
+    &:hover{
+        background-color: $red-dark;
+        animation: scaleButton 0.8s alternate infinite;
+    }
+
+    @keyframes scaleButton{
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+
+        min-height: 60vh;
+
+        h1{
+            font-size: 2.4rem;
+            width: 100%;
+        }
+
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 375px){    
+    .hero{
+
+        min-height: 40vh;
+
+        h1{
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        p{
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+        }
+
+        .button-contact{
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+// About
+
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    img{
+        max-width: 570px;
+    }
+}
+
+.about-content div{
+    flex: 1;
+}
+
+.about-description{
+    h2{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+        line-height: 150%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about-content{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-content div{
+        text-align: center;
+    }
+
+    .about-content img{
+        max-width: 100%;
+    }
+
+    .about-description{
+        h2{
+            font-size: 2.5rem;
+        }
+
+        p{
+            font-size: 1rem;
+        }
+    }
+}
