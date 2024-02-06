@@ -157,6 +157,7 @@ i {
   .hero .button-contact {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 }
 .about {
@@ -170,6 +171,7 @@ i {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding: 3rem 0.5rem;
 }
 .about-content img {
   max-width: 570px;
@@ -182,6 +184,7 @@ i {
 .about-description h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 .about-description p {
   font-size: 1.2rem;
@@ -194,17 +197,157 @@ i {
     flex-direction: column;
     gap: 2rem;
   }
-  .about-content div {
-    text-align: center;
-  }
   .about-content img {
     max-width: 100%;
   }
   .about-description h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .about-description p {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+}
+.services {
+  background-color: #fff;
+  color: #232224;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+.services-content p {
+  line-height: 150%;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.haircuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 2.75rem 2.12rem 2.75rem;
+}
+
+.haircut {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.haircut img:hover {
+  transform: scale(1.2);
+  z-index: 1;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.haircuts-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+  z-index: 2;
+}
+.haircuts-info button {
+  background-color: #d94140;
+  color: #fff;
+  border: 1px solid #d94140;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+.haircuts-info button:hover {
+  background-color: #b42b2b;
+}
+
+@media screen and (max-width: 768px) {
+  .services-content h2 {
+    font-size: 2rem;
+  }
+  .services-content p {
+    font-size: 0.8rem;
+  }
+  .haircuts {
+    flex-direction: column;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 0;
+  gap: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 2rem;
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-whatsapp img {
+  max-width: 70px;
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -130px;
+  background-color: #232224;
+  color: #fff;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatsapp {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .btn-whatsapp img {
+    max-width: 54px;
   }
 }
 * {
